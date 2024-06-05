@@ -9,44 +9,40 @@ Assessment Requirements
 */
 
 // create a variable to hold your NFT's
-
 const NFTs =[]
 
 // this function will take in some values as parameters, create an
 // NFT object using the parameters passed to it for its metadata, 
 // and store it in the variable above.
-
-function mintNFT (_name, _eyeColor, _shirttype, _bling) {
+function mintNFT (_name, _Height, _Weight, _Address) {
 const NFT ={
     "name": _name,
-    "eyeColor": _eyeColor,
-    "shirtType": _shirttype,
-    "bling": _bling
+    "Height": _Height,
+    "Weight": _Weight,
+    "Address": _Address
 }
 NFTs.push(NFT);
-console.log("Minted: "+_name);
+console.log("Entered NFT: "+_name);
 }
 
 // create a "loop" that will go through an "array" of NFT's
 // and print their metadata with console.log()
-
 function listNFTs () {
 for(let i = 0; i<NFTs.length; i++){
     console.log("\nName: " +NFTs[i].name);
-    console.log("Eye Colour: " +NFTs[i].eyeColor);
-    console.log("Shirt Type: " +NFTs[i].shirtType);
-    console.log("Bling: " +NFTs[i].bling + "\n");
+    console.log("Height: " +NFTs[i].Height);
+    console.log("Weight: " +NFTs[i].Weight);
+    console.log("Address: " +NFTs[i].Address + "\n");
 }
 }
 
 // print the total number of NFTs we have minted to the console
-
 function getTotalSupply() {
 console.log("Total Number Of NFTs: " + NFTs.length);
 }
 
 // call your functions below this line
-
-mintNFT("Sumantra", "Black", "Jumper", "Dimond Ring");
+mintNFT("Sumantra", "180cm", "72kg", "Kathmandu, Nepal");
 listNFTs();
 getTotalSupply();
+
